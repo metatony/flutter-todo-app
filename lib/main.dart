@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'home_page.dart';
 
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
-      theme: ThemeData(unselectedWidgetColor: Colors.white),
+      theme: ThemeData(fontFamily: GoogleFonts.poppins().fontFamily,
+        unselectedWidgetColor: Colors.white),
       debugShowCheckedModeBanner: false,
       home:const HomePage(),
     );
