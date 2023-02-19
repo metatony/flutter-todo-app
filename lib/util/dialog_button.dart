@@ -13,12 +13,12 @@ class DialogButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(5),
       ),
       onPressed: onPressed,
-      color: Colors.white,
+      color: Colors.black,
       child: Text(
         text,
         style: const TextStyle(
           fontWeight: FontWeight.w600,
-          color: Color(0xff37474f),
+          color: Colors.white,
         ),
       ),
     );

@@ -17,11 +17,11 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-  // if this is the first time opening the app, then create default data
+    // if this is the first time opening the app, then create default data
     if (_myBox.get('TODOLIST') == null) {
       db.createInitialData();
     } else {
-  //there is already an existing data
+      //there is already an existing data
       db.loadData();
     }
     super.initState();
@@ -73,16 +73,19 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color(0xff102027),
+        backgroundColor: Colors.black,
         onPressed: createNewTask,
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.add,
+        color: Colors.white,),
       ),
-      backgroundColor: const Color(0xff37474f),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: const Color(0xff102027),
         centerTitle: true,
-        title: const Text('what do you want [TO DO]'),
+        backgroundColor: Colors.black,
+        title: const Text(
+          'todo list',
+          style: TextStyle(color: Colors.white),
+        ),
       ),
       body: ListView.builder(
         itemCount: db.todoList.length,

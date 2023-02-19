@@ -30,19 +30,18 @@ class TOdoTile extends StatelessWidget {
           ],
         ),
         child: ListTile(
-          tileColor: Color(0xff37474f),
+          //tileColor: Color(0xff37474f),
           title: Text(
             taskName,
             style: TextStyle(
-                color: Colors.white,
+              fontSize: 18,
                 decoration: taskCompleted
                     ? TextDecoration.lineThrough
                     : TextDecoration.none,
-                //decorationColor: Colors.red,
                 decorationThickness: 2.85),
           ),
           leading: Checkbox(
-            activeColor: Colors.green,
+            //activeColor: Colors.green,
             onChanged: onChanged,
             value: taskCompleted,
             shape: const CircleBorder(),
